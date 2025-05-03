@@ -23,3 +23,5 @@ Currently in **Beta**, the app is under active development and may not include a
 
 ## 👨‍💻 Developed By
 Maaz Qureshi  
+
+![Screenshot 2025-05-03 180135](https://github.com/user-attachments/assets/9a468749-f194-4f58-a9f6-6cb875615230)
