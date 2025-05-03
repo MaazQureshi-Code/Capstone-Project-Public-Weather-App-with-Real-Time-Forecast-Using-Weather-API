@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Will It Rain Tomorrow?</h1>
+        <p class="subtitle">Check if it will rain in your location tomorrow</p>
+    </header>
+
+    <form action="/weather" method="POST" class="weather-form">
+        <input type="text" name="location" placeholder="Enter location (e.g., London, UK)" required>
+        <button type="submit">Check Weather</button>
+    </form>
+
+    <% if (typeof willRainTomorrow !=='undefined' ) { %>
+        <div class="result">
+            <h2>
+                <%= location %>
+            </h2>
+            <p class="weather-message <%= willRainTomorrow ? 'rain' : 'no-rain' %>">
+                <%= willRainTomorrow ? 'Yes, it will rain tomorrow. 🌧️' : 'No, it will not rain tomorrow. ☀️' %>
+            </p>
+        </div>
+        <% } %>
+
+            <% if (typeof error !=='undefined' ) { %>
+                <div class="error">
+                    <p>
+                        <%= error %>
+                    </p>
+                </div>
+                <% } %>
+</div>
+    
+</body>
+</html>
